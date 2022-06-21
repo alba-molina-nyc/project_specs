@@ -36,4 +36,3 @@ but if i in '.' and i.next in '0123456789' -> then yes append to the list )
 --------------------------------------------------------------------------------------------------------------
 """
 
-"""2. (Python) Read data from the input file and save its content to database"""
