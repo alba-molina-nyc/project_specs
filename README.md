@@ -3,7 +3,8 @@
 ## Goal:
 
 - Develop code to process an input data file and apply mapping data from a Vidrio mapping file to generate an account valuation and account performance output data sets to be imported to the Vidrio platform.
-- Input data comes from an outside data vendor and contains their product/entity names. Those entity names must be converted to Vidiointernal entity names to be accepted by the platform data import facilities.
+- Input data comes from an outside data vendor and contains their product/entity names.
+  - Those entity names must be converted to Vidiointernal entity names to be accepted by the platform data import facilities.
 
 _Specs below are to explain the entire data management process for this project._
 
