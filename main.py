@@ -9,31 +9,26 @@ path = '/Users/albamolina/take1/data'
 
 
 def get_date():
-    date_list = []
+    date_form_list = []
     for input_file in os.listdir(path):
         date_holder = input_file[14:24:1]
         print(date_holder, 'we are here')
         for i in date_holder:
             if i in '0123456789':
-                date_list.append(i)
-                print(date_list)
+                date_form_list.append(i)
             else:
                 if i in '.':
-                    i = '_'
-                    date_list.append(i)
-                    print(date_list)
+                    i = '/'
+                    date_form_list.append(i)
+    
+    print(date_form_list, 'dateholder')
+    print(''.join(str(i) for i in date_form_list), 'joinerjoiner')
+    return ''.join(str(i) for i in date_form_list)
                 
-            
-
-
-            # print(input_file)
-            # print(input_file)
-
-            
-
-           
-
 get_date()
+
+# def change_filename():
+
 
 
 
