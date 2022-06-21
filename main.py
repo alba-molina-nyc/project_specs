@@ -7,13 +7,15 @@ path = '/Users/albamolina/take1/data'
 
 # 1. (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when
 
+
 def get_date():
     for input_file in os.listdir(path):
         if input_file.endswith('.xlsx'):
             h_input_date = slice(14, 24, 1)
             print(h_input_date)
             input_date = input_file[h_input_date]
-            print(input_date)
+            print(input_date, 'input date')
+            print(type(input_date))
 
             # new_date = input_file[input_date].strptime(input_date, "%Y-%m-%d %H:%M:%S.%f" )
             # # new_date = input_date.strftime(input_date, "%Y-%m-%d" )
