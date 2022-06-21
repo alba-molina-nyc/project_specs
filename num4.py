@@ -11,13 +11,10 @@ df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 x = change_filename()
 for i in x:
     reference_day = x[14:24:1]
-
     break
 
 print(reference_day, )
     
-# print(change_filename(), 'change file name')
-# print(reference_day, 'ref')
 
 
 
