@@ -9,26 +9,20 @@ path = '/Users/albamolina/take1/data'
 
 
 def get_date():
+    date_list = []
     for input_file in os.listdir(path):
-        if input_file.endswith('.xlsx'):
-            h_input_date = slice(14, 24, 1)
-            print(h_input_date)
-            input_date = input_file[h_input_date]
-            print(input_date, 'input date')
-            print(type(input_date))
+        for i in input_file:
+            if i in '0123456789':
+                print(i)
+            
 
-            # new_date = input_file[input_date].strptime(input_date, "%Y-%m-%d %H:%M:%S.%f" )
-            # # new_date = input_date.strftime(input_date, "%Y-%m-%d" )
-            # print(input_file[input_date], 'we are here')
-            # print(new_date)
-            # print(input_date, 'input date')
-            # new_date = input_date.strftime("%Y-%m-%d")
-            # print(new_date, new_date)
-         
-            # filename = input_file[:14]
-            # print(filename, 'filename')
+
             # print(input_file)
-            # print(input_file_list)
+            # print(input_file)
+
+            
+
+           
 
 get_date()
 
