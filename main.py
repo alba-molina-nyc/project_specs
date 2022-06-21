@@ -11,9 +11,18 @@ path = '/Users/albamolina/take1/data'
 def get_date():
     date_list = []
     for input_file in os.listdir(path):
-        for i in input_file:
+        date_holder = input_file[14:24:1]
+        print(date_holder, 'we are here')
+        for i in date_holder:
             if i in '0123456789':
-                print(i)
+                date_list.append(i)
+                print(date_list)
+            else:
+                if i in '.':
+                    i = '_'
+                    date_list.append(i)
+                    print(date_list)
+                
             
 
 
