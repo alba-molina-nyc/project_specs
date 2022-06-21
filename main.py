@@ -3,11 +3,9 @@ from datetime import datetime, date
 import os
 path = '/Users/albamolina/take1/data'
 
-"""
-# 1 (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when
-"""
+"""# 1 (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when"""
 
-def get_date():
+def change_filename():
     date_form_list = []
     for input_file in os.listdir(path):
         input_time_stamp = input_file[14:24:1]
@@ -23,7 +21,7 @@ def get_date():
     print(filename)
     return filename
                 
-get_date()
+change_filename()
 
 """
 --------------------------------------------------------------------------------------------------------------
@@ -37,5 +35,4 @@ but if i in '.' and i.next in '0123456789' -> then yes append to the list )
 --------------------------------------------------------------------------------------------------------------
 """
 
-
-
+"""2. (Python) Read data from the input file and save its content to database"""
