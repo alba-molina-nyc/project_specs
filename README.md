@@ -20,7 +20,9 @@ Ex_mapping_file.xlsx
 
 1. (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when
    the program starts.
+   ![Step1](/imgs/step1.png)
 2. (Python) Read data from the input file and save its content to database.
+   ![Step2](/imgs/step2.png)
 3. (Python) Read the mapping file and save its content to database.
 4. (Python) Using “pandas” package to generate portfolio valuation output file
    (“DAV Proforma Acc Analy.xlsx”) that will have the following columns (col names in bold, specs below):
