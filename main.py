@@ -12,7 +12,6 @@ def get_date():
     date_form_list = []
     for input_file in os.listdir(path):
         date_holder = input_file[14:24:1]
-        print(date_holder, 'we are here')
         for i in date_holder:
             if i in '0123456789':
                 date_form_list.append(i)
@@ -20,6 +19,12 @@ def get_date():
                 if i in '.':
                     i = '/'
                     date_form_list.append(i)
+        date_str_form = ''.join(str(i) for i in date_form_list)
+        filename = input_file[:14] + date_str_form
+        print(filename, 'skldfjosifj')
+        print(date_str_form, 'str form')
+      
+
     
     print(date_form_list, 'dateholder')
     print(''.join(str(i) for i in date_form_list), 'joinerjoiner')
