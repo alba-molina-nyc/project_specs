@@ -25,6 +25,24 @@ nn = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
 print(nn)
 # TODO: figure out how to set nn values equal to df_input_file['Investor Account UID']
 # df_input_file['Investor Account UID'] == nn
+df_input_file['Investor Account Long Name'] = ''
+df_input_file['Investment Account UID'] = ''
+df_input_file['Investment Account Long Name'] = ''
+df_input_file['Attribution Gross'] = ''
+df_input_file['Attribution Net'] = ''
+df_input_file['Opening Allocation'] = ''
+df_input_file['Closing Allocation'] = ''
+df_input_file['Opening Equity'] = ''
+df_input_file['Closing Equity'] = ''
+df_input_file['Investment Performance'] = ''
+df_input_file['Investment Adj Opening Balance'] = ''
+df_input_file['Investment Closing Balance'] = ''
+df_input_file['Portfolio Opening Balance'] = ''
+df_input_file['Portfolio Closing Balance:'] = ''
+
+
+
+
 
 
 
