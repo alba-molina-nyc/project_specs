@@ -1,6 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 from main import *
+import re
 
 engine = create_engine('postgresql://albamolina@localhost/vidrio')
 """2. (Python) Read the ex_input file and save its content to database."""
@@ -15,7 +16,7 @@ df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # print(df_ex_input.columns, "=====> df ex col",
 # df_ex_mapping.columns,  "=====> df ex mapping col",)
 
-headers = df_ex_input.columns 
+# headers = df_ex_input.columns 
 
 
 df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
@@ -26,10 +27,14 @@ df_ex_input['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
 
 # Periodicity: ‘Daily’
 df_ex_input['Periodicity'] = 'Daily'
-print(df_ex_input['Periodicity'])
 
+# Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file 
 
+headers = df_ex_input.columns 
+print(headers )
 
-
+df_ex_input['Investor Account UID'] = 
 
 # df_ex_input['name_of_column'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+
+# headers = df_ex_input.columns 

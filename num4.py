@@ -1,10 +1,15 @@
 import pandas as pd
 from sqlalchemy import create_engine
 from main import *
+import re
 
 engine = create_engine('postgresql://albamolina@localhost/vidrio')
 """2. (Python) Read the ex_input file and save its content to database."""
-df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx')
+df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Constituents')
+# print(df_ex_input)
+
+df_ex_input2 = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data')
+print(df_ex_input2)
 # df_ex_input.to_sql('Ex_input_file_02.04.2021.xlsx', con=engine)
 """3. (Python) Read the mapping file and save its content to database."""
 df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
@@ -48,7 +53,7 @@ Portfolio Opening Balance: 'Investment Adj Opening Balance'"""
 # df_ex_mapping.columns,  "=====> df ex mapping col",)
 
 headers = df_ex_input.columns 
-print(headers)
+# print(headers)
 
 reference_day = df_ex_input['LAST_UPDATE_DATE_EOD']
 # print(reference_day)
@@ -77,4 +82,4 @@ df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
 
 
 
-print(df_ex_input['Opening Allocation'])
+# print(df_ex_input['Opening Allocation'])
