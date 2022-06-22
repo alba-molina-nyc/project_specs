@@ -8,7 +8,7 @@ path = '/Users/albamolina/take1/data'
 def change_filename():
     date_form_list = []
     for input_file in os.listdir(path):
-        print('this is the old filename: ', input_file)
+        # print('this is the old filename: ', input_file)
         input_time_stamp = input_file[14:24:1]
         for i in input_time_stamp:
             if i in '0123456789':
@@ -19,7 +19,7 @@ def change_filename():
                     date_form_list.append(i)
         date_str_form = ''.join(str(i) for i in date_form_list)
         filename = input_file[:14] + date_str_form + '.xlsx'
-    print('this is the new filename: ', filename)
+    # print('this is the new filename: ', filename)
     return filename
                 
 change_filename()
