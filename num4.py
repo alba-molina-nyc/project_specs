@@ -6,13 +6,11 @@ import re
 engine = create_engine('postgresql://albamolina@localhost/vidrio')
 # gets the file in general
 df_input_file = df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx')
-print(df_input_file, 'input file general')
-
+# gets the constituents tab 
 df_constituents = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Constituents')
-print(df_constituents, 'df constituents')
-
+# gets the index data tab 
 df_index_data = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data')
-print(df_index_data, 'df index data')
+
 # df_ex_input.to_sql('Ex_input_file_02.04.2021.xlsx', con=engine)
 """3. (Python) Read the mapping file and save its content to database."""
 df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
