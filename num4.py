@@ -3,20 +3,25 @@ from sqlalchemy import create_engine
 from main import *
 import re
 
+# Connect to SQL, read excel files, read diff tabs in file
+# ------------------------------------------------------------------------------------------------------------------------
 engine = create_engine('postgresql://albamolina@localhost/vidrio')
-# gets the file in general
 df_input_file = df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx')
-# gets the constituents tab 
 df_constituents = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Constituents')
-# gets the index data tab 
 df_index_data = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data')
-
 # df_ex_input.to_sql('Ex_input_file_02.04.2021.xlsx', con=engine)
-"""3. (Python) Read the mapping file and save its content to database."""
 df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # df_ex_mapping.to_sql('data/Ex_mapping_file.xlsx', con=engine)
-
-
+# ------------------------------------------------------------------------------------------------------------------------
+# Question 4 TODO: change the file name once figured out computation DAV Proforma ACC Analy.xlsx['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+# ------------------------------------------------------------------------------------------------------------------------
+headers = df_input_file.columns 
+# print(headers)
+df_input_file['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+# print(df_input_file['Reference Day'])
+df_input_file['Opening Allocation'] = df_ex_input['Beginning Weight %']
+# print(df_input_file['Opening Allocation'])
+df_index_data
 
 """
 (Python) Using “pandas” package to generate portfolio valuation output file
@@ -49,15 +54,12 @@ Portfolio Opening Balance: 'Investment Adj Opening Balance'"""
 
 
 # 4
-
 # print(df_ex_input.columns, "=====> df ex col",
 # df_ex_mapping.columns,  "=====> df ex mapping col",)
 
-headers = df_ex_input.columns 
-# print(headers)
 
-reference_day = df_ex_input['LAST_UPDATE_DATE_EOD']
-# print(reference_day)
+
+
 
 for index, row in df_ex_input.iterrows():
     # print(index,row['Current NAV'])
@@ -78,7 +80,7 @@ y = df_ex_input.loc[df_ex_input['Current Price'] == 14.71]
 
 
 
-df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
+
 
 
 
