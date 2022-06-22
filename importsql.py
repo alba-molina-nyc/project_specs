@@ -23,3 +23,13 @@ df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
 # Reference Day: taken from the time stamp portion of the input data file
 
 df_ex_input['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+
+# Periodicity: ‘Daily’
+df_ex_input['Periodicity'] = 'Daily'
+print(df_ex_input['Periodicity'])
+
+
+
+
+
+# df_ex_input['name_of_column'] = df_ex_input['LAST_UPDATE_DATE_EOD']
