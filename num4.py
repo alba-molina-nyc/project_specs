@@ -13,7 +13,7 @@ df_index_data = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data'
 df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # df_ex_mapping.to_sql('data/Ex_mapping_file.xlsx', con=engine)
 # ------------------------------------------------------------------------------------------------------------------------
-# Question 4 TODO: change the file name once figured out computation DAV Proforma ACC Analy.xlsx['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+# Question 4 TODO: change the file name once figured out logic DAV Proforma ACC Analy.xlsx['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD'] and insert the columns in there
 # ------------------------------------------------------------------------------------------------------------------------
 headers = df_input_file.columns 
 # print(headers)
@@ -21,17 +21,42 @@ df_input_file['Reference Day'] = df_input_file['LAST_UPDATE_DATE_EOD']
 # print(df_input_file['Reference Day'])
 df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
 # print(df_input_file['Opening Allocation'])
-# df_input_file['Investor Account UID'] = []
+nn = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
+print(nn)
+
+# df_input_file['Investor Account UID'] = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
 
 
-for index, row in df_index_data.iterrows():
-    x = []
-    print(x, 'before if')
-    if row['ISIN '] == 'HFRIILAU':
-        x.append(row['ISIN '])
-        print(x, 'after if')
-        # print(index, 'i====>r', row['ISIN '])
-        break
+
+# def get_account_uid():
+#     # df_input_file['Investor Account UID'] = []
+#     for index, row in df_index_data.iterrows():
+#         while row['ISIN '] != None:
+#             if row['ISIN '] == 'HFRIILAU':
+#                 df_input_file['Investor Account UID'].append(row['ISIN '])
+#                 # print(x)
+#                 # break
+           
+                
+
+#     return df_input_file['Investor Account UID'] 
+               
+        
+# get_account_uid()
+# # print(get_account_uid())
+# df_input_file['Investor Account UID'] = get_account_uid()
+# print(df_input_file['Investor Account UID'])
+
+
+
+
+# x = df_input_file['Investor Account UID'] 
+
+# print(df_input_file['Investor Account UID'])
+
+
+  
+      
 
 
 
