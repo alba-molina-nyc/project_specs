@@ -3,38 +3,21 @@ from sqlalchemy import create_engine
 from main import *
 import re
 
+# ------------------------------------------------------------------------------------------------------------------------
+# Connect to SQL, read excel files, read diff tabs in file
+# ------------------------------------------------------------------------------------------------------------------------
 engine = create_engine('postgresql://albamolina@localhost/vidrio')
-"""2. (Python) Read the ex_input file and save its content to database."""
-df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx')
+df_input_file = df_ex_input = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx')
+df_constituents = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Constituents')
+df_index_data = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data')
 # df_ex_input.to_sql('Ex_input_file_02.04.2021.xlsx', con=engine)
-"""3. (Python) Read the mapping file and save its content to database."""
 df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # df_ex_mapping.to_sql('data/Ex_mapping_file.xlsx', con=engine)
 
-# 4
-
-# print(df_ex_input.columns, "=====> df ex col",
-# df_ex_mapping.columns,  "=====> df ex mapping col",)
-
-# headers = df_ex_input.columns 
-
-
-df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
-
-# Reference Day: taken from the time stamp portion of the input data file
-
-df_ex_input['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
-
-# Periodicity: ‘Daily’
-df_ex_input['Periodicity'] = 'Daily'
-
-# Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file 
-
-headers = df_ex_input.columns 
-print(headers )
-
-df_ex_input['Investor Account UID'] = 
-
-# df_ex_input['name_of_column'] = df_ex_input['LAST_UPDATE_DATE_EOD']
-
-# headers = df_ex_input.columns 
+# ------------------------------------------------------------------------------------------------------------------------
+# Q4 
+# ------------------------------------------------------------------------------------------------------------------------
+headers = df_input_file.columns 
+df_input_file['Reference Day'] = df_input_file['LAST_UPDATE_DATE_EOD']
+df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
+nn = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']

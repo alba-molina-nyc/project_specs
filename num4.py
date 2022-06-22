@@ -23,8 +23,12 @@ df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
 # print(df_input_file['Opening Allocation'])
 nn = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
 print(nn)
+# TODO: figure out how to set nn values equal to df_input_file['Investor Account UID']
+# df_input_file['Investor Account UID'] == nn
 
-# df_input_file['Investor Account UID'] = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
+
+
+
 
 
 
@@ -137,3 +141,33 @@ y = df_ex_input.loc[df_ex_input['Current Price'] == 14.71]
 
 # print(df_index_data)
 # print(df_ex_input.columns)
+
+
+
+# 4
+
+# print(df_ex_input.columns, "=====> df ex col",
+# df_ex_mapping.columns,  "=====> df ex mapping col",)
+
+# headers = df_ex_input.columns 
+
+
+# df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
+
+# # Reference Day: taken from the time stamp portion of the input data file
+
+# df_ex_input['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+
+# # Periodicity: ‘Daily’
+# df_ex_input['Periodicity'] = 'Daily'
+
+# # Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file 
+
+# headers = df_ex_input.columns 
+# print(headers )
+
+# df_ex_input['Investor Account UID'] = 
+
+# # df_ex_input['name_of_column'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+
+# # headers = df_ex_input.columns 
