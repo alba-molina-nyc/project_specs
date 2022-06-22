@@ -55,3 +55,7 @@ print(reference_day)
 
 for index, row in df_ex_input.iterrows():
     print(index,row['Current NAV'])
+
+#for accessing only particular rows use .loc
+y = df_ex_input.loc[df_ex_input['Current Price'] == 14.71]
+print(y, 'y')
