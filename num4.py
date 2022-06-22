@@ -51,11 +51,30 @@ headers = df_ex_input.columns
 print(headers)
 
 reference_day = df_ex_input['LAST_UPDATE_DATE_EOD']
-print(reference_day)
+# print(reference_day)
 
 for index, row in df_ex_input.iterrows():
-    print(index,row['Current NAV'])
+    # print(index,row['Current NAV'])
+    break
 
 #for accessing only particular rows use .loc
 y = df_ex_input.loc[df_ex_input['Current Price'] == 14.71]
-print(y, 'y')
+# print(y, 'y')
+
+# TODO: figure out how to do multiple conditions
+
+
+# add a column called investment closing balance = closing allocation * closing equity 
+
+# df_ex_input['investment_closing_balance'] = df_ex_input['closing']
+
+# Opening Allocation: 'Beginning Weight %' column from “Constituents” tab 
+
+
+
+df_ex_input['Opening Allocation'] = df_ex_input['Beginning Weight %']
+
+
+
+
+print(df_ex_input['Opening Allocation'])
