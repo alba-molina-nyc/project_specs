@@ -21,14 +21,25 @@ df_input_file['Reference Day'] = df_input_file['LAST_UPDATE_DATE_EOD']
 # print(df_input_file['Reference Day'])
 df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
 # print(df_input_file['Opening Allocation'])
-
+# df_input_file['Investor Account UID'] = []
 
 
 for index, row in df_index_data.iterrows():
-    print(index,row['ISIN '])
-    break
+    x = []
+    print(x, 'before if')
+    if row['ISIN '] == 'HFRIILAU':
+        x.append(row['ISIN '])
+        print(x, 'after if')
+        # print(index, 'i====>r', row['ISIN '])
+        break
 
 
+
+
+
+
+# df_input_file['Investor Account UID'] = [(index, row) for index, row in df_index_data.iterrows() if (index,row['ISIN '])]
+# print(df_input_file['Investor Account UID'])
 # df_input_file['Investor Account UID'] = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
 # print(df_input_file['Investor Account UID'])
 
