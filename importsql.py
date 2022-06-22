@@ -29,4 +29,10 @@ df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # df_ex_mapping.columns,  "=====> df ex mapping col",)
 
 headers = df_ex_input.columns 
-print(headers)
+
+reference_day = df_ex_input['LAST_UPDATE_DATE_EOD']
+print(reference_day)
+
+"""
+Reference Day: taken from the time stamp portion of the input data file 
+bc last time they put it in """
