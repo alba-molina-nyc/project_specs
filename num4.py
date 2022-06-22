@@ -17,11 +17,23 @@ df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 # ------------------------------------------------------------------------------------------------------------------------
 headers = df_input_file.columns 
 # print(headers)
-df_input_file['Reference Day'] = df_ex_input['LAST_UPDATE_DATE_EOD']
+df_input_file['Reference Day'] = df_input_file['LAST_UPDATE_DATE_EOD']
 # print(df_input_file['Reference Day'])
-df_input_file['Opening Allocation'] = df_ex_input['Beginning Weight %']
+df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
 # print(df_input_file['Opening Allocation'])
-df_index_data
+
+
+
+for index, row in df_index_data.iterrows():
+    print(index,row['ISIN '])
+    break
+
+
+# df_input_file['Investor Account UID'] = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
+# print(df_input_file['Investor Account UID'])
+
+# df_input_file['Investor Account UID'] = df_index_data['ISIN ']
+# print(df_input_file['Investor Account UID'])
 
 """
 (Python) Using “pandas” package to generate portfolio valuation output file
@@ -86,3 +98,6 @@ y = df_ex_input.loc[df_ex_input['Current Price'] == 14.71]
 
 
 # print(df_ex_input['Opening Allocation'])
+
+# print(df_index_data)
+# print(df_ex_input.columns)
