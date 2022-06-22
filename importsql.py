@@ -25,5 +25,8 @@ df_ex_mapping = pd.read_excel('data/Ex_mapping_file.xlsx')
 
 # 4
 
-print(df_ex_input.columns, "=====> df ex col",
-df_ex_mapping.columns,  "=====> df ex mapping col",)
+# print(df_ex_input.columns, "=====> df ex col",
+# df_ex_mapping.columns,  "=====> df ex mapping col",)
+
+headers = df_ex_input.columns 
+print(headers)
