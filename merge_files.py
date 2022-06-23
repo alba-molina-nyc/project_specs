@@ -46,10 +46,13 @@ def add_columns():
     file['Closing Allocation'] = file['End Weight %']
     file['Investment Performance'] = file['% Price Change']
 
-    return file.to_excel('DAV Proforma Acc Analy.xlsx')
-add_columns()
+    for index, row in file.iterrows():
+        print(index, "<== index |||||      row ====>", row)
 
- # # print(file.columns, 'before ')
+    # print(file.columns, 'before ')
     # print(file, 'before price change')
     # # print(file.columns, 'after )
     # print(file, 'AFTER Price change')
+
+    # return file.to_excel('DAV Proforma Acc Analy.xlsx')
+add_columns()
