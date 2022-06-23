@@ -48,35 +48,8 @@ def add_columns():
     file['Opening Allocation'] = file['Beginning Weight %']
     file['Closing Allocation'] = file['End Weight %']
     file['Investment Performance'] = file['% Price Change']
-    # file['xx'] = file.iloc['ISIN _y']
-    # nn = [i for i in file[12] if i == 'HFRIILAU']
-    # print(nn)
-  
-    # print(file['Investment Performance'], 'performance')
-    # print(file.columns[12])
+    # print(df_index_data.loc[(df_index_data['ISIN '] == 'HFRIILAU') and df_index_data['Date'] == 'Reference_day' ])
 
-    # counter = 0
-    # for i in file.columns:
-    #     counter += 1
-        
-    #     print(i, counter)
-
-    
-
-    # for index, row in file.iterrows():
-    #     print(row['Closing Action'])
-    #     if row['ISIN _x'] == 'HFRIILAU':
-    #         print(row['Closing Action'])
-    #     # print(index, row['ISIN _y'])
-    #     # print(index, "<== index |||||      row ====>", row)
-    #     # print(index, "<== index |||||      row ====>", row)
-    #     break
-
-    
-    # print(file.columns, 'before ')
-    # print(file, 'before price change')
-    # # print(file.columns, 'after )
-    # print(file, 'AFTER Price change')
-
-    # return file.to_excel('DAV Proforma Acc Analy.xlsx')
+    # print(df_index_data.columns , 'here')
+    print(file)
 add_columns()
