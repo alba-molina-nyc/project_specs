@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from main import *
+from change_filename import *
 import re
 
 # Connect to SQL, read excel files, read diff tabs in file
