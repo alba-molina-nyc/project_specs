@@ -40,9 +40,12 @@ merge_files()
 def add_columns():
     file = merge_files()
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
-    print(file.columns, 'before adding rperiodicity')
-    file['Periodicity'] = 'Daily'
+    print(file.columns, 'before file[Gross Contribution to Index]')
+    file['Attribution Gross'] = file['Gross Contribution to Index']
+    print(file.columns, 'AFTER file[Gross Contribution to Index]')
+
+
     
-    print(file.columns, 'add periodicity')
+
 
 add_columns()
