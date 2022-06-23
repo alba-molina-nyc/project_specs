@@ -32,6 +32,9 @@ def merge_files():
     index_file = get_c_cols()
     constituents_file = get_i_cols()
     merged_file = index_file.merge(constituents_file[['Date', 'ISIN ', 'Index Name', 'NAV', 'Previous Day NAV', 'NAV Change %']], on='NAV Change %', how = 'left')
+    # print(index_file.columns, 'index_data')
+    # print(constituents_file.columns, 'constituents')
+    # print(merged_file.columns, 'merged')
     return merged_file
 
 merge_files()
@@ -45,10 +48,28 @@ def add_columns():
     file['Opening Allocation'] = file['Beginning Weight %']
     file['Closing Allocation'] = file['End Weight %']
     file['Investment Performance'] = file['% Price Change']
+    # file['xx'] = file.iloc[]
+    # print(file['Investment Performance'], 'performance')
+    print(file.columns)
 
-    for index, row in file.iterrows():
-        print(index, "<== index |||||      row ====>", row)
+    counter = 0
+    for i in file.columns:
+        counter += 1
+        
+        print(i, counter)
 
+    
+
+    # for index, row in file.iterrows():
+    #     print(row['Closing Action'])
+    #     if row['ISIN _x'] == 'HFRIILAU':
+    #         print(row['Closing Action'])
+    #     # print(index, row['ISIN _y'])
+    #     # print(index, "<== index |||||      row ====>", row)
+    #     # print(index, "<== index |||||      row ====>", row)
+    #     break
+
+    
     # print(file.columns, 'before ')
     # print(file, 'before price change')
     # # print(file.columns, 'after )
