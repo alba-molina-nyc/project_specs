@@ -39,8 +39,10 @@ merge_files()
 
 def add_columns():
     file = merge_files()
-    print(file, 'before adding reference day')
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
-    print(file, 'add reference day')
+    print(file.columns, 'before adding rperiodicity')
+    file['Periodicity'] = 'Daily'
+    
+    print(file.columns, 'add periodicity')
 
 add_columns()
