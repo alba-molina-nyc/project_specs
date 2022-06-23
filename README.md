@@ -18,39 +18,34 @@ Ex_mapping_file.xlsx
 
 # Tasks Description:
 
-1. (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when
-   the program starts.
-   ![Step1](/imgs/step1.png)
-2. (Python) Read data from the input file and save its content to database.
-   ![Step2](/imgs/step2.png)
-3. (Python) Read the mapping file and save its content to database.
-   ![Step3](/imgs/step3.png)
+- [x] 1. (Python) Extract a time stamp portion from the input file name and display it in MM/DD/YYYY format when
+     the program starts.
+     ![Step1](/imgs/step1.png)
+- [x] 2.  (Python) Read data from the input file and save its content to database.
+      ![Step2](/imgs/step2.png)
 
-4. (Python) Using “pandas” package to generate portfolio valuation output file
-   (“DAV Proforma Acc Analy.xlsx”) that will have the following columns (col names in bold, specs below):
-   Reference Day: taken from the time stamp portion of the input data file
-   Periodicity: ‘Daily’
-   Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file
-   Investor Account Long Name: From column C in the “Index Data” tab of the input data file where ISIN =
-   “HFRIILAU” and Date= Reference Day
-   Investment Account UID: Leave blank
-   Investment Account Long Name: Have to translate company name from “Constituents” tab of the data
-   input file to Product Name from the mapping file using “ISIN” column from the “Constituents” tab and
-   “Counterparty ID” column in the mapping file as matching keys. Use these keys to match all records in
-   the output data set.
-   Attribution Gross: “Gross Contribution to Index” column from “Constituents” tab
-   Attribution Net: “Net Contribution to Index” column from “Constituents” tab
-   Opening Allocation: 'Beginning Weight %' column from “Constituents” tab
-   Closing Allocation: 'End Weight %' column from “Constituents” tab
-   Opening Equity: ‘Previous Day NAV’ column from Index Data tab for ‘HFRI-I Liquid Alt UCITS Index’ index
-   for Reference Day
-   Closing Equity: ‘NAV’ column from Index Data tab for ‘HFRI-I Liquid Alt UCITS Index’ index for Reference
-   Day
-   Investment Performance: '% Price Change' column from “Constituents” tab
-   Investment Adj Opening Balance: 'Opening Allocation' _ 'Opening Equity'
-   Investment Closing Balance: 'Closing Allocation' _ 'Closing Equity'
-   Portfolio Opening Balance: 'Investment Adj Opening Balance'
-   Portfolio Closing Balance: 'Investment Closing Balance'
+- [x] 3. (Python) Read the mapping file and save its content to database.
+     ![Step3](/imgs/step3.png)
+- [ ]4. (Python) Using “pandas” package to generate portfolio valuation output file (“DAV Proforma Acc Analy.xlsx”) that will have the following columns (col names in bold, specs below):
+- [x] Reference Day: taken from the time stamp portion of the input data file
+- [x] Periodicity: ‘Daily’
+- [ ] Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file
+- [ ] Investor Account Long Name: From column C in the “Index Data” tab of the input data file where ISIN = “HFRIILAU” and Date= Reference Day
+- [ ] Investment Account UID: Leave blank
+- [ ] Investment Account Long Name: Have to translate company name from “Constituents” tab of the data input file to Product Name from the mapping file using “ISIN” column from the “Constituents” tab and “Counterparty ID” column in the mapping file as matching keys. Use these keys to match all records in
+      the output data set.
+- [x] Attribution Gross: “Gross Contribution to Index” column from “Constituents” tab
+- [x] Attribution Net: “Net Contribution to Index” column from “Constituents” tab
+- [x] Opening Allocation: 'Beginning Weight %' column from “Constituents” tab
+- [x] Closing Allocation: 'End Weight %' column from “Constituents” tab
+- [ ]Opening Equity: ‘Previous Day NAV’ column from Index Data tab for ‘HFRI-I Liquid Alt UCITS Index’ index for Reference Day
+- [ ] Closing Equity: ‘NAV’ column from Index Data tab for ‘HFRI-I Liquid Alt UCITS Index’ index for Reference Day
+- [x] Investment Performance: '% Price Change' column from “Constituents” tab
+- [ ] Investment Adj Opening Balance: 'Opening Allocation' \_ 'Opening Equity'
+- [ ] Investment Closing Balance: 'Closing Allocation' \_ 'Closing Equity'
+- [ ] Portfolio Opening Balance: 'Investment Adj Opening Balance'
+- [ ] Portfolio Closing Balance: 'Investment Closing Balance'
+      ![Step4](/imgs/step4.png)
 
 ## SEND UPDATE AT THIS POINT
 

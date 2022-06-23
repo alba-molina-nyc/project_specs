@@ -39,6 +39,7 @@ merge_files()
 def add_columns():
     file = merge_files()
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
+    file['Periodicity'] = 'Daily'
     file['Attribution Gross'] = file['Gross Contribution to Index']
     file['Attribution Net'] = file['Net Contribution to Index']
     file['Opening Allocation'] = file['Beginning Weight %']
@@ -46,9 +47,9 @@ def add_columns():
     file['Investment Performance'] = file['% Price Change']
 
     return file.to_excel('DAV Proforma Acc Analy.xlsx')
+add_columns()
 
-    # # print(file.columns, 'before ')
+ # # print(file.columns, 'before ')
     # print(file, 'before price change')
     # # print(file.columns, 'after )
     # print(file, 'AFTER Price change')
-add_columns()
