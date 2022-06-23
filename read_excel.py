@@ -17,10 +17,7 @@ read_ex_input()
 
 def read_c():
     df_constituents = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Constituents')
-    print(df_constituents.columns, 'before')
     df_constituents['NAV Change %'] = df_constituents['NAV % Change']
-    print(df_constituents.columns, 'after')
-    
     return df_constituents
 read_c()
 
