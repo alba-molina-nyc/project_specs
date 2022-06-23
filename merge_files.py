@@ -42,12 +42,13 @@ def add_columns():
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
     file['Attribution Gross'] = file['Gross Contribution to Index']
     file['Attribution Net'] = file['Net Contribution to Index']
+    file['Opening Allocation'] = file['Beginning Weight %']
+    file['Closing Allocation'] = file['End Weight %']
+
     # print(file.columns, 'before Openning Allocation')
     print(file, 'Openning Allocation')
-    file['Opening Allocation'] = file['Beginning Weight %']
 
-
-
+    
     # print(file.columns, 'after AOpenning Allocation')
     print(file, 'AFTER Openning Allocation')
 
