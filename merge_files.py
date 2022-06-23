@@ -1,3 +1,4 @@
+from audioop import add
 from operator import index
 import pandas as pd
 from read_excel import *
@@ -31,7 +32,15 @@ def merge_files():
     index_file = get_c_cols()
     constituents_file = get_i_cols()
     merged_file = index_file.merge(constituents_file[['Date', 'ISIN ', 'Index Name', 'NAV', 'Previous Day NAV', 'NAV Change %']], on='NAV Change %', how = 'left')
-    print(merged_file.columns)
+    # print(merged_file.columns, 'mergefile func')
     return merged_file
 
 merge_files()
+
+def add_columns():
+    file = merge_files()
+    print(file, 'before adding reference day')
+    file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
+    print(file, 'add reference day')
+
+add_columns()
