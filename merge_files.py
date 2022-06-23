@@ -14,7 +14,7 @@ get_c_cols()
 
 def get_i_cols():
     df_index_data = read_id()  
-    df_index_data = df_index_data.drop(columns=['Total AUM', 'NAV Change $', 'AUM Change from Previous Day','Previous Day AUM' ])
+    df_index_data = df_index_data.drop(columns=['Total AUM', 'NAV Change $', 'AUM Change from Previous Day','Previous Day AUM' ] )
     df_index_data.columns
     return df_index_data
 
@@ -48,15 +48,18 @@ def add_columns():
     file['Opening Allocation'] = file['Beginning Weight %']
     file['Closing Allocation'] = file['End Weight %']
     file['Investment Performance'] = file['% Price Change']
-    # file['xx'] = file.iloc[]
+    # file['xx'] = file.iloc['ISIN _y']
+    # nn = [i for i in file[12] if i == 'HFRIILAU']
+    # print(nn)
+  
     # print(file['Investment Performance'], 'performance')
-    print(file.columns)
+    # print(file.columns[12])
 
-    counter = 0
-    for i in file.columns:
-        counter += 1
+    # counter = 0
+    # for i in file.columns:
+    #     counter += 1
         
-        print(i, counter)
+    #     print(i, counter)
 
     
 
