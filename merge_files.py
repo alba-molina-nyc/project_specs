@@ -44,12 +44,12 @@ def add_columns():
     file['Attribution Net'] = file['Net Contribution to Index']
     file['Opening Allocation'] = file['Beginning Weight %']
     file['Closing Allocation'] = file['End Weight %']
-
-    # print(file.columns, 'before ')
-    print(file, 'before price change')
     file['Investment Performance'] = file['% Price Change']
 
 
+
+    # print(file.columns, 'before ')
+    print(file, 'before price change')
     # print(file.columns, 'after )
     print(file, 'AFTER Price change')
 
