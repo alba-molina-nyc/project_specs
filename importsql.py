@@ -21,3 +21,22 @@ headers = df_input_file.columns
 df_input_file['Reference Day'] = df_input_file['LAST_UPDATE_DATE_EOD']
 df_input_file['Opening Allocation'] = df_input_file['Beginning Weight %']
 nn = [i for i in df_index_data['ISIN '] if i == 'HFRIILAU']
+
+
+
+
+
+for index, row in df_index_data.iterrows():
+    for i, r in df_input_file.iterrows():
+        # print(index, row, i, r)
+    x = ''
+    if df_index_data['ISIN '].item() == 'HFRIILAU':
+        x = df_input_file['Investor Account Long Name']
+        # print(x)
+        break
+    
+      
+# xx = [i for i in df_index_data['Index Name'] if i == 'HFRIILAU' and i == df_input_file['Reference Day'] ]
+# print(xx)
+# df_input_file['Investor Account Long Name'] = df_index_data['Index Name']
+# print(df_input_file['Investor Account Long Name'], 'here')

@@ -2,6 +2,7 @@ import pandas as pd
 from main import *
 from importsql import *
 import re
+import itertools
 
 # ------------------------------------------------------------------------------------------------------------------------
 # connect functins to connect to input in general, constituents, and index data 
@@ -37,14 +38,23 @@ drop_c_columns()
 def drop_id_columns():
     df_index_data = connect_id()
     id_columns = df_index_data.drop(columns=['Date', 'Total AUM',  'Previous Day NAV', 'NAV Change $',  'NAV Change %','AUM Change from Previous Day', 'Previous Day AUM'])
+    # print(id_columns, 'id columns')
     return id_columns
     
 drop_id_columns()
 
-    
-    
+def get_headers():
+    i_data = drop_id_columns()
+    c_data = drop_c_columns()
+    headers = []
+    for i in i_data:
+        headers.append(i_data.columns)
+        for j in c_data:
+            headers.append(c_data.columns)
+            print(headers, 'printing headers')
+            return headers
 
-# headers = df_input_file.columns 
-# print(headers)
 
-# kee= 'ISIN ' (B) 'Index Name' (c)
+get_headers()
+
+
