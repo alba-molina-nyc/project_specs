@@ -24,9 +24,9 @@ read_c()
 
 def read_id():
     df_index_data = pd.read_excel('data/Ex_input_file_02.04.2021.xlsx', 'Index Data')
-    df_index_data['ISIN '] = df_index_data.loc[df_index_data['ISIN '] == 'HFRIILAU']
+    x = df_index_data.loc[df_index_data['ISIN '] == 'HFRIILAU']
     
-    print( df_index_data['ISIN '] )
-    print(df_index_data, 'after')
+    print(x, 'x')
+   
     return df_index_data
 read_id()
