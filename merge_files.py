@@ -32,7 +32,6 @@ def merge_files():
     index_file = get_c_cols()
     constituents_file = get_i_cols()
     merged_file = index_file.merge(constituents_file[['Date', 'ISIN ', 'Index Name', 'NAV', 'Previous Day NAV', 'NAV Change %']], on='NAV Change %', how = 'left')
-    # print(merged_file.columns, 'mergefile func')
     return merged_file
 
 merge_files()
@@ -46,15 +45,10 @@ def add_columns():
     file['Closing Allocation'] = file['End Weight %']
     file['Investment Performance'] = file['% Price Change']
 
+    return file.to_excel('DAV Proforma Acc Analy.xlsx')
 
-
-    # print(file.columns, 'before ')
-    print(file, 'before price change')
-    # print(file.columns, 'after )
-    print(file, 'AFTER Price change')
-
-
-    
-
-
+    # # print(file.columns, 'before ')
+    # print(file, 'before price change')
+    # # print(file.columns, 'after )
+    # print(file, 'AFTER Price change')
 add_columns()
