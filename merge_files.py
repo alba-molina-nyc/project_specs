@@ -42,9 +42,10 @@ def add_columns():
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
     file['Attribution Gross'] = file['Gross Contribution to Index']
     print(file.columns, 'before ATTRITION NET')
+    print(file, 'before ATTRITION NET')
     file['Attribution Net'] = file['Net Contribution to Index']
-   
-    print(file.columns, 'AFTER ATTRITION NET')
+    print(file.columns, 'after ATTRITION NET')
+    print(file, 'AFTER ATTRITION NET')
 
 
     
