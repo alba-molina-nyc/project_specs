@@ -45,12 +45,13 @@ def add_columns():
     file['Opening Allocation'] = file['Beginning Weight %']
     file['Closing Allocation'] = file['End Weight %']
 
-    # print(file.columns, 'before Openning Allocation')
-    print(file, 'Openning Allocation')
+    # print(file.columns, 'before ')
+    print(file, 'before price change')
+    file['Investment Performance'] = file['% Price Change']
 
-    
-    # print(file.columns, 'after AOpenning Allocation')
-    print(file, 'AFTER Openning Allocation')
+
+    # print(file.columns, 'after )
+    print(file, 'AFTER Price change')
 
 
     
