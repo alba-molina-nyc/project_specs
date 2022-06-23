@@ -41,11 +41,15 @@ def add_columns():
     file = merge_files()
     file['Reference Day'] = file['LAST_UPDATE_DATE_EOD']
     file['Attribution Gross'] = file['Gross Contribution to Index']
-    print(file.columns, 'before ATTRITION NET')
-    print(file, 'before ATTRITION NET')
     file['Attribution Net'] = file['Net Contribution to Index']
-    print(file.columns, 'after ATTRITION NET')
-    print(file, 'AFTER ATTRITION NET')
+    # print(file.columns, 'before Openning Allocation')
+    print(file, 'Openning Allocation')
+    file['Opening Allocation'] = file['Beginning Weight %']
+
+
+
+    # print(file.columns, 'after AOpenning Allocation')
+    print(file, 'AFTER Openning Allocation')
 
 
     
