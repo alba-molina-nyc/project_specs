@@ -31,7 +31,7 @@ Ex_mapping_file.xlsx
 - [x] Periodicity: ‘Daily’
 - [ ] Investor Account UID: “HFRIILAU” from column B in the “Index Data” tab of the input data file
 - [ ] Investor Account Long Name: From column C in the “Index Data” tab of the input data file where ISIN = “HFRIILAU” and Date= Reference Day
-- [ ] Investment Account UID: Leave blank
+- [x] Investment Account UID: Leave blank
 - [ ] Investment Account Long Name: Have to translate company name from “Constituents” tab of the data input file to Product Name from the mapping file using “ISIN” column from the “Constituents” tab and “Counterparty ID” column in the mapping file as matching keys. Use these keys to match all records in
       the output data set.
 - [x] Attribution Gross: “Gross Contribution to Index” column from “Constituents” tab
