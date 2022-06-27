@@ -32,7 +32,7 @@ temp_df = ifile.merge(mapping_data, how='left', right_on='Counterparty ID', left
 for col in temp_df.columns:
     temp_df['Reference Day'] = temp_df['LAST_UPDATE_DATE_EOD']
     temp_df['Periodicity'] = 'Daily'
-    # temp_df['Investor Account UID'] = temp_df['']                   #TODO: come back
+    temp_df['Investor Account UID'] = temp_df['ISIN '] == 'HFRIILAU' 
     # temp_df['Investor Account Long Name'] = temp_df['']             #TODO: come back
     temp_df['Investment Account UID'] = ' '
     # temp_df['Investment Account Long Name'] = temp_df['']           #TODO: come back
@@ -50,8 +50,11 @@ for col in temp_df.columns:
 
   
    
-    print(temp_df.columns)
-    print(len(temp_df.columns))
+    # print(temp_df.columns)
+    # print(temp_df['ISIN '])
+    print(temp_df['Investor Account UID'], 'column')
+
+    # print(len(temp_df.columns))
     
     break
 
